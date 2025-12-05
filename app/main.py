@@ -4,6 +4,8 @@ import tempfile
 from typing import List, Dict, Any
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -85,6 +87,13 @@ def extract_and_validate_pdfs(files: List[UploadFile] = File(...)):
     # Validate
     report = validator.validate_batch(all_invoices)
     return report
+
+# Mount frontend directory to serve static assets
+app.mount("/static", StaticFiles(directory="frontend"), name="static")
+
+@app.get("/")
+async def read_index():
+    return FileResponse("frontend/index.html")
 
 if __name__ == "__main__":
     import uvicorn

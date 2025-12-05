@@ -1,5 +1,5 @@
-// Config - In a real app, this might come from env vars
-const API_BASE = 'http://127.0.0.1:8000';
+// Config - Relative path allows it to work on both localhost and deployed URL
+const API_BASE = '';
 
 // State
 let currentReport = null; // { summary: ..., details: [] }
