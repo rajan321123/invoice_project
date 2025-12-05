@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv
+env/
+venv/
+*.pdf
+test_invoices.json
+test_relaxed.json
+test_report.json
