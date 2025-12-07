@@ -2,6 +2,11 @@
 
 This document outlines the data extraction schema and quality control validation rules for the B2B Invoice Processing System.
 
+
+## Software Overview
+
+[Watch the Software Overview Video](https://drive.google.com/file/d/11vTHELEXiWYfZeNeKG4Z4KNvt5i1-M-a/view?usp=share_link)
+
 ## 1. Invoice Extraction Schema
 
 The following 10 fields are extracted from each invoice document:
